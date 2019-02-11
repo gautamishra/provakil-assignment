@@ -1,0 +1,40 @@
+<div class="container">
+  <ng-container *ngIf="!!registerUser">
+  <div class="username-container">
+    <form (ngSubmit)="startChating()">
+    <div class="message">
+      Please choose your user name
+    </div>
+    <br>
+    <div class="form-group username">
+      <input type="text" name="username" [(ngModel)]="userName">
+    </div>
+    <div class="message">
+        Select Channel
+      </div>
+      <br>
+      <div class="form-group username">
+        <input type="text" name="channelName" [(ngModel)]="channelName">
+      </div>  
+      <div class="submit text-center">
+          <button type="submit"  class="btn btn-primary"> Start chatting</button>
+        </div>
+  </form>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!registerUser">
+    <div class="chat-container" #chatContainer>
+      <ng-container *ngFor="let mess of allMessages">
+        <div class="user-message">
+          <span class="bold"><{{mess.username}}>:</span>
+          <span class="content">{{mess.msg}}</span>
+        </div>
+      </ng-container>
+    </div>
+    <div class="textbox">
+      <textarea [rows]="5" placeholder="Type your message and Enter" [(ngModel)]="textMessage" (keyup.enter)="postMessage()"></textarea>
+      <button class="btn btn-primary post-button" (click)="postMessage()"> Post message</button>
+    </div>
+</ng-container>
+</div>

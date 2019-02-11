@@ -20,8 +20,15 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "bootstrap": "^3.4.0",
     "core-js": "^2.5.4",
-    "rxjs": "~6.3.3",
+    "lodash": "^4.17.11",
+    "ng6-socket-io": "^1.0.3",
+    "ngx-socket-io": "^2.1.1",
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.4.0",
+    "sails.io.js": "^1.2.1",
+    "socket.io-client": "^2.2.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
