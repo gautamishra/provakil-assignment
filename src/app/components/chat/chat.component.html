@@ -34,7 +34,11 @@
     </div>
     <div class="textbox">
       <textarea [rows]="5" placeholder="Type your message and Enter" [(ngModel)]="textMessage" (keyup.enter)="postMessage()"></textarea>
-      <button class="btn btn-primary post-button" (click)="postMessage()"> Post message</button>
+      <br>
+      <span class="margin-left">Sending message as {{userName}}</span>
+      <br>
+      <br>
+      <button class="btn btn-primary margin-left" (click)="postMessage()"> Post message</button>
     </div>
 </ng-container>
 </div>
